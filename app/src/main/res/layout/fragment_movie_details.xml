@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F3EDF7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleCentered="true"
+        app:titleTextAppearance="@style/Toolbar.TitleText" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:paddingBottom="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView_poster"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="15dp"
+                android:contentDescription="@null"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_rating_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/muli_regular"
+                android:text="IMDb Rating:"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView_poster" />
+
+            <TextView
+                android:id="@+id/textView_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/muli_regular"
+                app:layout_constraintBottom_toBottomOf="@id/textView_rating_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_crew"
+                app:layout_constraintTop_toTopOf="@id/textView_rating_label"
+                tools:text="some rating" />
+
+            <TextView
+                android:id="@+id/textView_rating_count_label"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/muli_regular"
+                android:text="Rating count:"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_rating_label" />
+
+            <TextView
+                android:id="@+id/textView_rating_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/muli_regular"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintBottom_toBottomOf="@id/textView_rating_count_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textView_rating_count_label"
+                tools:text="some rating" />
+
+            <TextView
+                android:id="@+id/textView_rank_label"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/muli_regular"
+                android:text="Rank:"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_rating_count_label" />
+
+            <TextView
+                android:id="@+id/textView_rank_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/muli_regular"
+                android:layout_marginEnd="15dp"
+                app:layout_constraintBottom_toBottomOf="@id/textView_rank_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textView_rank_label"
+                tools:text="some rating" />
+
+            <TextView
+                android:id="@+id/textView_rank_up_down_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/muli_regular"
+                android:layout_marginStart="15dp"
+                android:text="RankUpDown:"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_rank_label" />
+
+            <TextView
+                android:id="@+id/textView_rank_up_down"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/muli_regular"
+                app:layout_constraintBottom_toBottomOf="@id/textView_rank_up_down_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textView_rank_up_down_label"
+                tools:text="some rating" />
+
+            <TextView
+                android:id="@+id/textView_year_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/muli_regular"
+                android:text="Year:"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_rank_up_down_label" />
+
+            <TextView
+                android:id="@+id/textView_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/muli_regular"
+                app:layout_constraintBottom_toBottomOf="@id/textView_year_label"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textView_year_label"
+                tools:text="some rating" />
+
+            <TextView
+                android:id="@+id/textView_crew_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/muli_regular"
+                android:text="Crew"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_year_label" />
+
+            <TextView
+                android:id="@+id/textView_crew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/muli_regular"
+                android:gravity="center"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView_crew_label" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

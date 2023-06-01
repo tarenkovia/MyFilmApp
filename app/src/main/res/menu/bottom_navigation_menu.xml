@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/popularMoviesFragment"
+        android:enabled="true"
+        android:icon="@drawable/bottom_navigation_popular"
+        android:title="@null" />
+    <item
+        android:id="@+id/topMoviesFragment"
+        android:enabled="true"
+        android:icon="@drawable/bottom_navigation_view_top_250"
+        android:title="@null" />
+</menu>

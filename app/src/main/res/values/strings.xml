@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Movies</string>
+    <string name="rating_placeholder">%s/10 IMDb</string>
+</resources>

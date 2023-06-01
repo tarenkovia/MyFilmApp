@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/movieDetailsFragment">
+
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="ru.eeone.movies.presentation.detail.MovieDetailsFragment"
+        android:label="MovieDetailsFragment"
+        tools:layout="@layout/fragment_movie_details">
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_popularMoviesFragment"
+            app:destination="@id/popularMoviesFragment" />
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_topMoviesFragment"
+            app:destination="@id/topMoviesFragment" />
+        <argument
+            android:name="movie"
+            app:argType="ru.eeone.movies.data.model.Movie" />
+    </fragment>
+    <fragment
+        android:id="@+id/popularMoviesFragment"
+        android:name="ru.eeone.movies.presentation.popular.PopularMoviesFragment"
+        android:label="PopularMoviesFragment"
+        tools:layout="@layout/fragment_popular_movies">
+        <action
+            android:id="@+id/action_popularMoviesFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/topMoviesFragment"
+        android:name="ru.eeone.movies.presentation.top.TopMoviesFragment"
+        android:label="TopMoviesFragment"
+        tools:layout="@layout/fragment_top_movies">
+        <action
+            android:id="@+id/action_topMoviesFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+</navigation>
